@@ -1,33 +1,25 @@
-# Username Element
+# Welcome User Element
 
-This element is **not** all that useful as a card (it can be used for that to), the purpose of this is to give the option to add static text on a `picture-elements` card.
-
+This element simply displays 'Welcome [User]'. 
 ## Options
 
 | Name | Type | Default | Description
 | ---- | ---- | ------- | -----------
-| type | string | **Required** | `custom:username-element`
+| type | string | **Required** | `custom:welcome-user-element`
 
 ## Installation
 
 ### Step 1
 
-Install `username-element` by copying `username-element.js`from this repo to `<config directory>/www/username-element.js` on your Home Assistant instanse.
-
-**Example:**
-
-```bash
-wget https://raw.githubusercontent.com/custom-cards/username-element/master/username-element.js
-mv username-element.js /config/www/
-```
+Install `welcome-user-element` by copying `welcome-user-element.js`from this repo to `<config directory>/www/welcome-user-element.js` on your Home Assistant instanse.
 
 ### Step 2
 
-Link `username-element` inside you `ui-lovelace.yaml`.
+Link `welcome-user-element` inside you `ui-lovelace.yaml`.
 
 ```yaml
 resources:
-  - url: /local/username-element.js?v=0
+  - url: /local/welcome-user-element.js
     type: js
 ```
 
@@ -36,11 +28,5 @@ resources:
 Add a custom element in your `ui-lovelace.yaml`
 
 ```yaml
-      - type: picture-elements
-        image: /local/files/LUfuf8ow.jpg
-        elements:
-          - type: custom:username-element
-            style:
-              top: 59.6%
-              left: 26.8%
+      - type: custom:welcome-user-element
 ```
